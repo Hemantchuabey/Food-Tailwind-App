@@ -1,11 +1,12 @@
 import React from "react";
 import { AiOutlineMenu, AiOutlineSearch } from "react-icons/ai";
+import { BsFillCartFill } from "react-icons/bs";
 
 const Navbar = () => {
   return (
     <div className="max-w-[1640px] mx-auto flex justify-between items-center p-4">
+      {/* Left hand side of Nav */}
       <div className="flex items-center">
-        {/* Left hand side of Nav */}
         <div className="cursor-pointer">
           <AiOutlineMenu size={30} />
         </div>
@@ -17,6 +18,20 @@ const Navbar = () => {
           <p className="p-2">PickUp</p>
         </div>
       </div>
+      {/* search Input */}
+      <div className="bg-gray-200 rounded-full flex items-center px-2 w-[200px] sm:w-[400px] lg:w-[500px]">
+        <AiOutlineSearch size={25} />
+        <input
+          type="text"
+          placeholder="Search Foods..."
+          className="bg-transparent p-2 focus w-full"
+        />
+      </div>
+      {/* cart button */}
+      <button className="bg-black text-white hidden md:flex items-center py-2 rounded-full">
+        <BsFillCartFill size={20} className="mr-2" />
+        Cart
+      </button>
     </div>
   );
 };
