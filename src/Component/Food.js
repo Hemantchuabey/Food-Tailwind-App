@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { data } from "../Data/Data";
 
 const Food = () => {
   console.log(data);
+  const [foods, setFood] = useState(data);
   return (
     <div className="max-w-[1640px] m-auto px-4 py-12 ">
       <h1 className="text-orange-600 font-bold text-4xl text-center">
@@ -49,6 +50,22 @@ const Food = () => {
             </button>
           </div>
         </div>
+      </div>
+      {/* Display Foods */}
+      <div>
+        {foods.map((food, index) => {
+          return (
+            <div key={index}>
+              <img src={food.image} alt={food.name} />
+              <div>
+                <p>{food.name}</p>
+                <p>
+                  <span>{food.price}</span>
+                </p>
+              </div>
+            </div>
+          );
+        })}
       </div>
     </div>
   );
