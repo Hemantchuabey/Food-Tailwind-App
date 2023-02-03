@@ -69,16 +69,28 @@ const Food = () => {
         <div>
           <p className="font-bold text-gray-700">Filter Price</p>
           <div className="flex justify-between max-w-[390px] ">
-            <button className="border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white duration-300 m-1">
+            <button
+              onClick={() => filterPrice("$")}
+              className="border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white duration-300 m-1"
+            >
               $
             </button>
-            <button className="border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white duration-300 m-1">
+            <button
+              onClick={() => filterPrice("$$")}
+              className="border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white duration-300 m-1"
+            >
               $$
             </button>
-            <button className="border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white duration-300 m-1">
+            <button
+              onClick={() => filterPrice("$$$")}
+              className="border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white duration-300 m-1"
+            >
               $$$
             </button>
-            <button className="border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white duration-300 m-1">
+            <button
+              onClick={() => filterPrice("$$$$")}
+              className="border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white duration-300 m-1"
+            >
               $$$$
             </button>
           </div>
