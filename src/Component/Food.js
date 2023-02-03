@@ -3,7 +3,25 @@ import { data } from "../Data/Data";
 
 const Food = () => {
   // console.log(data);
-  const [foods, setFood] = useState(data);
+  const [foods, setFoods] = useState(data);
+
+  // filter type burger/pizza,etc.
+  const filterType = (category) => {
+    setFoods(
+      data.filter((food) => {
+        return food.category === category;
+      })
+    );
+  };
+  // filter by price
+  const filterPrice = (price) => {
+    setFoods(
+      data.filter((food) => {
+        return food.price === price;
+      })
+    );
+  };
+
   return (
     <div className="max-w-[1640px] m-auto px-4 py-12 ">
       <h1 className="text-orange-600 font-bold text-4xl text-center">
