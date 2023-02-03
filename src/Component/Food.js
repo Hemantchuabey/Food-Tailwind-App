@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { data } from "../Data/Data";
 
 const Food = () => {
-  console.log(data);
+  // console.log(data);
   const [foods, setFood] = useState(data);
   return (
     <div className="max-w-[1640px] m-auto px-4 py-12 ">
@@ -52,15 +52,24 @@ const Food = () => {
         </div>
       </div>
       {/* Display Foods */}
-      <div>
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 pt-4">
         {foods.map((food, index) => {
           return (
-            <div key={index}>
-              <img src={food.image} alt={food.name} />
-              <div>
-                <p>{food.name}</p>
+            <div
+              key={index}
+              className="border shadow-lg rounded-lg hover:scale-105 duration-300 ease-in-out"
+            >
+              <img
+                src={food.image}
+                alt={food.name}
+                className="w-full h-[200px] object-cover rounded-t-lg "
+              />
+              <div className="flex justify-between px-2 py-4">
+                <p className="font-bold"> {food.name}</p>
                 <p>
-                  <span>{food.price}</span>
+                  <span className="bg-orange-500 text-white rounded-full p-1">
+                    {food.price}
+                  </span>
                 </p>
               </div>
             </div>
