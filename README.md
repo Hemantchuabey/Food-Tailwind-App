@@ -1,1 +1,1 @@
-Watch Application Live : food-tailwind-app.vercel.app
+Watch Application Live : "food-tailwind-app.vercel.app"
