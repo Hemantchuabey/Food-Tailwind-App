@@ -1,4 +1,5 @@
 import "./App.css";
+import Category from "./Component/Category";
 import Food from "./Component/Food";
 import Headline from "./Component/HeadlineCards";
 import Hero from "./Component/Hero";
@@ -11,6 +12,7 @@ function App() {
       <Hero />
       <Headline />
       <Food />
+      <Category />
     </div>
   );
 }
